@@ -1,0 +1,13 @@
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\bin\Debug\test_communicatie.exe.config
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\bin\Debug\test_communicatie.exe
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\bin\Debug\test_communicatie.pdb
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\obj\Debug\test_communicatie.csprojAssemblyReference.cache
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\obj\Debug\test_communicatie.Form1.resources
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\obj\Debug\test_communicatie.Properties.Resources.resources
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\obj\Debug\test_communicatie.csproj.GenerateResource.cache
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\obj\Debug\test_communicatie.csproj.CoreCompileInputs.cache
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\obj\Debug\test_communicatie.csproj.CopyComplete
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\obj\Debug\test_communicatie.exe
+C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\obj\Debug\test_communicatie.pdb
