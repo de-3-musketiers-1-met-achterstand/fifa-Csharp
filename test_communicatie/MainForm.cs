@@ -81,6 +81,13 @@ namespace test_communicatie
 
         private void betButton_Click(object sender, EventArgs e)
         {
+            if(machtesComboBox.Text == "")
+            {
+                MessageBox.Show("Selecteer een wedstrijd!");
+
+                return;
+            }
+
             if (team1RadioButton.Checked)
             {
                 try
