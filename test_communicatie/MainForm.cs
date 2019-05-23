@@ -83,29 +83,43 @@ namespace test_communicatie
         {
             if (team1RadioButton.Checked)
             {
-                string team = team1RadioButton.Text;
-                Match match = (Match)machtesComboBox.SelectedItem;
-                int betAmount = int.Parse(betAmountTextBox.Text);
-                money = money - betAmount;
-                walletLabel.Text = money.ToString();
+                try
+                {
+                    string team = team1RadioButton.Text;
+                    Match match = (Match)machtesComboBox.SelectedItem;
+                    int betAmount = int.Parse(betAmountTextBox.Text);
+                    money = money - betAmount;
+                    walletLabel.Text = money.ToString();
 
 
-                Bet newBet = new Bet(match, betAmount, team);
+                    Bet newBet = new Bet(match, betAmount, team);
 
-                MessageBox.Show(newBet.ToString());
+                    MessageBox.Show(newBet.ToString());
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Voer een geldig geld bedrag in!");
+                }
             }
 
             if (team2RadioButton.Checked)
             {
-                string team = team2RadioButton.Text;
-                Match match = (Match)machtesComboBox.SelectedItem;
-                int betAmount = int.Parse(betAmountTextBox.Text);
-                money = money - betAmount;
-                walletLabel.Text = money.ToString();
+                try
+                {
+                    string team = team2RadioButton.Text;
+                    Match match = (Match)machtesComboBox.SelectedItem;
+                    int betAmount = int.Parse(betAmountTextBox.Text);
+                    money = money - betAmount;
+                    walletLabel.Text = money.ToString();
 
-                Bet newBet = new Bet(match, betAmount, team);
+                    Bet newBet = new Bet(match, betAmount, team);
 
-                MessageBox.Show(newBet.ToString());
+                    MessageBox.Show(newBet.ToString());
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Voer een geldig geld bedrag in!");
+                }
             }
         }
 
