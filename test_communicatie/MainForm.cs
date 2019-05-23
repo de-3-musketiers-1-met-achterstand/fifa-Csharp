@@ -81,6 +81,15 @@ namespace test_communicatie
 
         private void betButton_Click(object sender, EventArgs e)
         {
+            int betAmount = int.Parse(betAmountTextBox.Text);
+
+            if (money < betAmount)
+            {
+                MessageBox.Show("Je hebt niet genoeg geld!");
+
+                return;
+            }
+
             if(machtesComboBox.Text == "")
             {
                 MessageBox.Show("Selecteer een wedstrijd!");
@@ -94,7 +103,7 @@ namespace test_communicatie
                 {
                     string team = team1RadioButton.Text;
                     Match match = (Match)machtesComboBox.SelectedItem;
-                    int betAmount = int.Parse(betAmountTextBox.Text);
+                    betAmount = int.Parse(betAmountTextBox.Text);
                     money = money - betAmount;
                     walletLabel.Text = money.ToString();
 
@@ -115,7 +124,7 @@ namespace test_communicatie
                 {
                     string team = team2RadioButton.Text;
                     Match match = (Match)machtesComboBox.SelectedItem;
-                    int betAmount = int.Parse(betAmountTextBox.Text);
+                    betAmount = int.Parse(betAmountTextBox.Text);
                     money = money - betAmount;
                     walletLabel.Text = money.ToString();
 
