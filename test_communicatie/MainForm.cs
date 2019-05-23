@@ -59,7 +59,8 @@ namespace test_communicatie
 
             matchJson = downloader.DownloadString("http://localhost/fifa-Php/PHP/matchesjsonecho.php?");
             List<Match> matches = JsonConvert.DeserializeObject<List<Match>>(matchJson);
-            
+
+
             for (int i = 0; i < matches.Count ; i++)
             {
                 machtesComboBox.Items.Add(matches[i]);
@@ -76,6 +77,43 @@ namespace test_communicatie
 
                 walletLabel.Text = money.ToString();
             }
+        }
+
+        private void betButton_Click(object sender, EventArgs e)
+        {
+            if (team1RadioButton.Checked)
+            {
+                string team = team1RadioButton.Text;
+                Match match = (Match)machtesComboBox.SelectedItem;
+                int betAmount = int.Parse(betAmountTextBox.Text);
+                money = money - betAmount;
+                walletLabel.Text = money.ToString();
+
+
+                Bet newBet = new Bet(match, betAmount, team);
+
+                MessageBox.Show(newBet.ToString());
+            }
+
+            if (team2RadioButton.Checked)
+            {
+                string team = team2RadioButton.Text;
+                Match match = (Match)machtesComboBox.SelectedItem;
+                int betAmount = int.Parse(betAmountTextBox.Text);
+                money = money - betAmount;
+                walletLabel.Text = money.ToString();
+
+                Bet newBet = new Bet(match, betAmount, team);
+
+                MessageBox.Show(newBet.ToString());
+            }
+        }
+
+        private void machtesComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Match match = (Match)machtesComboBox.SelectedItem;
+            team1RadioButton.Text = match.Team1;
+            team2RadioButton.Text = match.Team2;
         }
     }
 }

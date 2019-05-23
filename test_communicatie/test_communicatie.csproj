@@ -55,6 +55,7 @@
     <Compile Include="AddBettor.Designer.cs">
       <DependentUpon>AddBettor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bet.cs" />
     <Compile Include="Bettor.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

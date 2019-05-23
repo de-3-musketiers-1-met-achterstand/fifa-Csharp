@@ -9,5 +9,6 @@ namespace test_communicatie
     public class Team
     {
         public string teamname { get; set; }
+
     }
 }

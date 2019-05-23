@@ -36,6 +36,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.walletLabel = new System.Windows.Forms.Label();
             this.machtesComboBox = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.betAmountTextBox = new System.Windows.Forms.TextBox();
+            this.betButton = new System.Windows.Forms.Button();
+            this.team2RadioButton = new System.Windows.Forms.RadioButton();
+            this.team1RadioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // showTeamsListBox
@@ -105,18 +111,73 @@
             // 
             // machtesComboBox
             // 
+            this.machtesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.machtesComboBox.FormattingEnabled = true;
-            this.machtesComboBox.Location = new System.Drawing.Point(266, 90);
+            this.machtesComboBox.Location = new System.Drawing.Point(61, 44);
             this.machtesComboBox.Name = "machtesComboBox";
             this.machtesComboBox.Size = new System.Drawing.Size(225, 24);
             this.machtesComboBox.TabIndex = 8;
+            this.machtesComboBox.SelectedIndexChanged += new System.EventHandler(this.machtesComboBox_SelectedIndexChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.betAmountTextBox);
+            this.groupBox1.Controls.Add(this.betButton);
+            this.groupBox1.Controls.Add(this.team2RadioButton);
+            this.groupBox1.Controls.Add(this.team1RadioButton);
+            this.groupBox1.Controls.Add(this.machtesComboBox);
+            this.groupBox1.Location = new System.Drawing.Point(232, 90);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(347, 348);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // betAmountTextBox
+            // 
+            this.betAmountTextBox.Location = new System.Drawing.Point(112, 167);
+            this.betAmountTextBox.Name = "betAmountTextBox";
+            this.betAmountTextBox.Size = new System.Drawing.Size(108, 22);
+            this.betAmountTextBox.TabIndex = 12;
+            // 
+            // betButton
+            // 
+            this.betButton.Location = new System.Drawing.Point(112, 210);
+            this.betButton.Name = "betButton";
+            this.betButton.Size = new System.Drawing.Size(108, 54);
+            this.betButton.TabIndex = 11;
+            this.betButton.Text = "Plaats gok";
+            this.betButton.UseVisualStyleBackColor = true;
+            this.betButton.Click += new System.EventHandler(this.betButton_Click);
+            // 
+            // team2RadioButton
+            // 
+            this.team2RadioButton.AutoSize = true;
+            this.team2RadioButton.Location = new System.Drawing.Point(212, 118);
+            this.team2RadioButton.Name = "team2RadioButton";
+            this.team2RadioButton.Size = new System.Drawing.Size(77, 21);
+            this.team2RadioButton.TabIndex = 10;
+            this.team2RadioButton.TabStop = true;
+            this.team2RadioButton.Text = "Team 2";
+            this.team2RadioButton.UseVisualStyleBackColor = true;
+            // 
+            // team1RadioButton
+            // 
+            this.team1RadioButton.AutoSize = true;
+            this.team1RadioButton.Location = new System.Drawing.Point(28, 118);
+            this.team1RadioButton.Name = "team1RadioButton";
+            this.team1RadioButton.Size = new System.Drawing.Size(77, 21);
+            this.team1RadioButton.TabIndex = 9;
+            this.team1RadioButton.TabStop = true;
+            this.team1RadioButton.Text = "Team 1";
+            this.team1RadioButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.machtesComboBox);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.walletLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -128,6 +189,8 @@
             this.Text = "Toernooi";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyUp);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,6 +206,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label walletLabel;
         private System.Windows.Forms.ComboBox machtesComboBox;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox betAmountTextBox;
+        private System.Windows.Forms.Button betButton;
+        private System.Windows.Forms.RadioButton team2RadioButton;
+        private System.Windows.Forms.RadioButton team1RadioButton;
     }
 }
 
