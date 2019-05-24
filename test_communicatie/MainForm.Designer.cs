@@ -37,13 +37,20 @@
             this.walletLabel = new System.Windows.Forms.Label();
             this.machtesComboBox = new System.Windows.Forms.ComboBox();
             this.placeBetGroupBox = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.betAmountTextBox = new System.Windows.Forms.TextBox();
             this.betButton = new System.Windows.Forms.Button();
             this.team2RadioButton = new System.Windows.Forms.RadioButton();
             this.team1RadioButton = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.cheatTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cheatButton = new System.Windows.Forms.Button();
+            this.cheatButton1 = new System.Windows.Forms.Button();
+            this.cheatButton2 = new System.Windows.Forms.Button();
+            this.cheatLabel = new System.Windows.Forms.Label();
             this.placeBetGroupBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // showTeamsListBox
@@ -52,7 +59,7 @@
             this.showTeamsListBox.ItemHeight = 16;
             this.showTeamsListBox.Location = new System.Drawing.Point(16, 90);
             this.showTeamsListBox.Name = "showTeamsListBox";
-            this.showTeamsListBox.Size = new System.Drawing.Size(189, 164);
+            this.showTeamsListBox.Size = new System.Drawing.Size(210, 164);
             this.showTeamsListBox.TabIndex = 0;
             // 
             // label1
@@ -138,6 +145,24 @@
             this.placeBetGroupBox.TabStop = false;
             this.placeBetGroupBox.Text = "Inzetten";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(57, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(220, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Selecteer hieronder een wedstrijd";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(36, 170);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Bedrag: €";
+            // 
             // betAmountTextBox
             // 
             this.betAmountTextBox.Location = new System.Drawing.Point(112, 167);
@@ -177,29 +202,76 @@
             this.team1RadioButton.Text = "Team 1";
             this.team1RadioButton.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // cheatTextBox
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 170);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 17);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Bedrag: €";
+            this.cheatTextBox.Location = new System.Drawing.Point(6, 21);
+            this.cheatTextBox.Name = "cheatTextBox";
+            this.cheatTextBox.Size = new System.Drawing.Size(198, 22);
+            this.cheatTextBox.TabIndex = 10;
+            this.cheatTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cheatTextBox_KeyUp);
             // 
-            // label6
+            // groupBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(57, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(220, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Selecteer hieronder een wedstrijd";
+            this.groupBox1.Controls.Add(this.cheatLabel);
+            this.groupBox1.Controls.Add(this.cheatButton2);
+            this.groupBox1.Controls.Add(this.cheatButton1);
+            this.groupBox1.Controls.Add(this.cheatButton);
+            this.groupBox1.Controls.Add(this.cheatTextBox);
+            this.groupBox1.Location = new System.Drawing.Point(16, 274);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(210, 164);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cheats";
+            // 
+            // cheatButton
+            // 
+            this.cheatButton.Enabled = false;
+            this.cheatButton.Location = new System.Drawing.Point(6, 57);
+            this.cheatButton.Name = "cheatButton";
+            this.cheatButton.Size = new System.Drawing.Size(75, 23);
+            this.cheatButton.TabIndex = 11;
+            this.cheatButton.Text = "+10";
+            this.cheatButton.UseVisualStyleBackColor = true;
+            this.cheatButton.Click += new System.EventHandler(this.cheatButton_Click);
+            // 
+            // cheatButton1
+            // 
+            this.cheatButton1.Enabled = false;
+            this.cheatButton1.Location = new System.Drawing.Point(129, 57);
+            this.cheatButton1.Name = "cheatButton1";
+            this.cheatButton1.Size = new System.Drawing.Size(75, 23);
+            this.cheatButton1.TabIndex = 12;
+            this.cheatButton1.Text = "+100";
+            this.cheatButton1.UseVisualStyleBackColor = true;
+            this.cheatButton1.Click += new System.EventHandler(this.cheatButton1_Click);
+            // 
+            // cheatButton2
+            // 
+            this.cheatButton2.Enabled = false;
+            this.cheatButton2.Location = new System.Drawing.Point(6, 108);
+            this.cheatButton2.Name = "cheatButton2";
+            this.cheatButton2.Size = new System.Drawing.Size(198, 23);
+            this.cheatButton2.TabIndex = 13;
+            this.cheatButton2.Text = "+1000";
+            this.cheatButton2.UseVisualStyleBackColor = true;
+            this.cheatButton2.Click += new System.EventHandler(this.cheatButton2_Click);
+            // 
+            // cheatLabel
+            // 
+            this.cheatLabel.AutoSize = true;
+            this.cheatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cheatLabel.Location = new System.Drawing.Point(23, 144);
+            this.cheatLabel.Name = "cheatLabel";
+            this.cheatLabel.Size = new System.Drawing.Size(0, 17);
+            this.cheatLabel.TabIndex = 14;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.placeBetGroupBox);
             this.Controls.Add(this.walletLabel);
             this.Controls.Add(this.label3);
@@ -214,6 +286,8 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyUp);
             this.placeBetGroupBox.ResumeLayout(false);
             this.placeBetGroupBox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,6 +310,12 @@
         private System.Windows.Forms.RadioButton team1RadioButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox cheatTextBox;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button cheatButton2;
+        private System.Windows.Forms.Button cheatButton1;
+        private System.Windows.Forms.Button cheatButton;
+        private System.Windows.Forms.Label cheatLabel;
     }
 }
 

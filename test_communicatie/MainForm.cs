@@ -163,5 +163,42 @@ namespace test_communicatie
         {
 
         }
+
+        private void cheatTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                if(cheatTextBox.Text == "Ch3atS")
+                {
+                    MessageBox.Show("Cheats Enabled");
+                    cheatButton.Enabled = true;
+                    cheatButton1.Enabled = true;
+                    cheatButton2.Enabled = true;
+                    cheatLabel.Text = ("Cheats Enabled");
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect password");
+                }
+            }
+        }
+
+        private void cheatButton_Click(object sender, EventArgs e)
+        {
+            money += 10;
+            walletLabel.Text = money.ToString();
+        }
+
+        private void cheatButton1_Click(object sender, EventArgs e)
+        {
+            money += 100;
+            walletLabel.Text = money.ToString();
+        }
+
+        private void cheatButton2_Click(object sender, EventArgs e)
+        {
+            money += 1000;
+            walletLabel.Text = money.ToString();
+        }
     }
 }

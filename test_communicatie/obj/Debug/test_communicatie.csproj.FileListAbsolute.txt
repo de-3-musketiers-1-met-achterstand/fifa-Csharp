@@ -12,3 +12,17 @@ C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_pr
 C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\obj\Debug\test_communicatie.pdb
 C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\obj\Debug\test_communicatie.MainForm.resources
 C:\Users\Dani Kools\Documents\Radius ICT Niveau 4 - leerjaar 1\Periode 4\FIFA_project\test_communicatie\test_communicatie\obj\Debug\test_communicatie.AddBettor.resources
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\bin\Debug\test_communicatie.exe.config
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\bin\Debug\test_communicatie.exe
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\bin\Debug\test_communicatie.pdb
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\bin\Debug\Newtonsoft.Json.dll
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\bin\Debug\Newtonsoft.Json.xml
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\obj\Debug\test_communicatie.csprojAssemblyReference.cache
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\obj\Debug\test_communicatie.AddBettor.resources
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\obj\Debug\test_communicatie.MainForm.resources
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\obj\Debug\test_communicatie.Properties.Resources.resources
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\obj\Debug\test_communicatie.csproj.GenerateResource.cache
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\obj\Debug\test_communicatie.csproj.CoreCompileInputs.cache
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\obj\Debug\test_communicatie.csproj.CopyComplete
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\obj\Debug\test_communicatie.exe
+D:\school\Jaar 1\Periode 4\Project\Fifa\C#\fifa-Csharp\test_communicatie\obj\Debug\test_communicatie.pdb
