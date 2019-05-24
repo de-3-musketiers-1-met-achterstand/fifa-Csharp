@@ -21,7 +21,7 @@ namespace test_communicatie
 
         public override string ToString()
         {
-            return "Je hebt gewed: " + this.Amount + " op " + this.MyTeam;
+            return "Je hebt gewed: € " + this.Amount + " op " + this.MyTeam;
         }
     }
 }

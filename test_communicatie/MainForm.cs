@@ -41,12 +41,10 @@ namespace test_communicatie
 
             walletLabel.Text = money.ToString();
 
-            MessageBox.Show("Hello " + bettor);
-
             System.Net.WebClient downloader = new System.Net.WebClient();
             string teamJson;
 
-            teamJson = downloader.DownloadString("http://localhost/fifa-Php/PHP/jsonecho.php");
+            teamJson = downloader.DownloadString("http://localhost/fifa-Php/PHP/jsonecho.php?key=hDMc4pFrC3");
 
             List<Team> teams = JsonConvert.DeserializeObject<List<Team>>(teamJson);
 
@@ -57,7 +55,7 @@ namespace test_communicatie
 
             string matchJson;
 
-            matchJson = downloader.DownloadString("http://localhost/fifa-Php/PHP/matchesjsonecho.php?");
+            matchJson = downloader.DownloadString("http://localhost/fifa-Php/PHP/matchesjsonecho.php?key=hDMc4pFrC3");
             List<Match> matches = JsonConvert.DeserializeObject<List<Match>>(matchJson);
 
 
@@ -69,27 +67,10 @@ namespace test_communicatie
 
         private void MainForm_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.M)
-            {
-                MessageBox.Show("Hello ");
-
-                money += 20;
-
-                walletLabel.Text = money.ToString();
-            }
         }
 
         private void betButton_Click(object sender, EventArgs e)
         {
-            int betAmount = int.Parse(betAmountTextBox.Text);
-
-            if (money < betAmount)
-            {
-                MessageBox.Show("Je hebt niet genoeg geld!");
-
-                return;
-            }
-
             if(machtesComboBox.Text == "")
             {
                 MessageBox.Show("Selecteer een wedstrijd!");
@@ -97,16 +78,32 @@ namespace test_communicatie
                 return;
             }
 
+
             if (team1RadioButton.Checked)
             {
                 try
                 {
                     string team = team1RadioButton.Text;
                     Match match = (Match)machtesComboBox.SelectedItem;
-                    betAmount = int.Parse(betAmountTextBox.Text);
+                    int betAmount = int.Parse(betAmountTextBox.Text);
+
+
+                    if(betAmount < 1)
+                    {
+                        MessageBox.Show("Je moet minimaal 1 euro inzetten");
+
+                        return;
+                    }
+
+                    if (money < betAmount)
+                    {
+                        MessageBox.Show("Je hebt niet genoeg geld!");
+
+                        return;
+                    }
+
                     money = money - betAmount;
                     walletLabel.Text = money.ToString();
-
 
                     Bet newBet = new Bet(match, betAmount, team);
 
@@ -124,7 +121,23 @@ namespace test_communicatie
                 {
                     string team = team2RadioButton.Text;
                     Match match = (Match)machtesComboBox.SelectedItem;
-                    betAmount = int.Parse(betAmountTextBox.Text);
+                    int betAmount = int.Parse(betAmountTextBox.Text);
+
+
+                    if (betAmount < 1)
+                    {
+                        MessageBox.Show("Je moet minimaal 1 euro inzetten");
+
+                        return;
+                    }
+
+                    if (money < betAmount)
+                    {
+                        MessageBox.Show("Je hebt niet genoeg geld!");
+
+                        return;
+                    }
+
                     money = money - betAmount;
                     walletLabel.Text = money.ToString();
 
@@ -144,6 +157,11 @@ namespace test_communicatie
             Match match = (Match)machtesComboBox.SelectedItem;
             team1RadioButton.Text = match.Team1;
             team2RadioButton.Text = match.Team2;
+        }
+
+        private void nameBettorLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
