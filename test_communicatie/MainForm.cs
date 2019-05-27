@@ -170,15 +170,15 @@ namespace test_communicatie
             {
                 if(cheatTextBox.Text == "Ch3atS")
                 {
-                    MessageBox.Show("Cheats Enabled");
+                    MessageBox.Show("Cheats ingeschakeld");
                     cheatButton.Enabled = true;
                     cheatButton1.Enabled = true;
                     cheatButton2.Enabled = true;
-                    cheatLabel.Text = ("Cheats Enabled");
+                    cheatLabel.Text = ("Cheats ingeschakeld");
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect password");
+                    MessageBox.Show("Incorrect cheatcode");
                 }
             }
         }
