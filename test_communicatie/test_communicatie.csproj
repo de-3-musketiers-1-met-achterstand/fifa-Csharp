@@ -66,6 +66,7 @@
     <Compile Include="Match.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Result.cs" />
     <Compile Include="Team.cs" />
     <EmbeddedResource Include="AddBettor.resx">
       <DependentUpon>AddBettor.cs</DependentUpon>

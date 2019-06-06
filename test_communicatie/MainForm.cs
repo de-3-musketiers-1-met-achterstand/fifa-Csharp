@@ -16,7 +16,7 @@ namespace test_communicatie
     {
         public string bettor { get; set; }
         public int money = 100;
-
+        string team;
 
         public MainForm()
         {
@@ -83,7 +83,7 @@ namespace test_communicatie
             {
                 try
                 {
-                    string team = team1RadioButton.Text;
+                    team = team1RadioButton.Text;
                     Match match = (Match)machtesComboBox.SelectedItem;
                     int betAmount = int.Parse(betAmountTextBox.Text);
 
@@ -107,7 +107,7 @@ namespace test_communicatie
 
                     Bet newBet = new Bet(match, betAmount, team);
 
-                    MessageBox.Show(newBet.ToString());
+                    showBetListBox.Items.Add(newBet);
                 }
                 catch (FormatException)
                 {
@@ -119,7 +119,7 @@ namespace test_communicatie
             {
                 try
                 {
-                    string team = team2RadioButton.Text;
+                    team = team2RadioButton.Text;
                     Match match = (Match)machtesComboBox.SelectedItem;
                     int betAmount = int.Parse(betAmountTextBox.Text);
 
@@ -143,7 +143,7 @@ namespace test_communicatie
 
                     Bet newBet = new Bet(match, betAmount, team);
 
-                    MessageBox.Show(newBet.ToString());
+                    showBetListBox.Items.Add(newBet);
                 }
                 catch (FormatException)
                 {
@@ -199,6 +199,74 @@ namespace test_communicatie
         {
             money += 1000;
             walletLabel.Text = money.ToString();
+        }
+
+        private void checkResultButton_Click(object sender, EventArgs e)
+        {
+            System.Net.WebClient downloader = new System.Net.WebClient();
+            string resultJson;
+            resultJson = downloader.DownloadString("http://localhost/fifa-Php/PHP/matchesjsonecho.php?key=hDMc4pFrC3");
+            List<Match> result = JsonConvert.DeserializeObject<List<Match>>(resultJson);
+
+            if (showBetListBox.SelectedIndex == -1)
+            {
+                return;
+            }
+
+            Bet bet = (Bet)showBetListBox.SelectedItem;
+
+            for (int i = 0; i < result.Count; i++)
+            {
+                if (bet.Match.Team1 == result[i].Team1 && bet.Match.Team2 == result[i].Team2)
+                {
+                    if (bet.Match.result1 > bet.Match.result2)
+                    {
+                        if (bet.MyTeam == result[i].Team1)
+                        {
+                            money = money + bet.Amount * 2;
+                            walletLabel.Text = money.ToString();
+                            MessageBox.Show("Je hebt gewonnen, Je krijgt het dubbele van je ingezetten bedrag");
+                            showBetListBox.Items.Remove(showBetListBox.SelectedItem);
+                            return;
+                        }
+                    }
+                                        
+                    if (bet.Match.result2 > bet.Match.result1)
+                    {
+                        if (bet.MyTeam == result[i].Team2)
+                        {                       
+                            money = money + bet.Amount * 2;
+                            walletLabel.Text = money.ToString();
+                            MessageBox.Show("Je hebt gewonnen, Je krijgt het dubbele van je ingezetten bedrag");
+                            showBetListBox.Items.Remove(showBetListBox.SelectedItem);
+                            return;
+                        }
+                    }
+                    
+                    
+                        MessageBox.Show("Je hebt verloren, Je bent je ingezetten bedrag kwijt");
+                        showBetListBox.Items.Remove(showBetListBox.SelectedItem);
+                        return;
+                    
+                }
+            }
+
+
+
+            //for (int i = 0; i < result.Count; i++)
+            //{
+            //    if(team == result[i].Team1 || team == result[i].Team2)
+            //    {
+            //        MessageBox.Show("test"); 
+            //    }
+            //}           
+
+            //if (result[0].result1 > result[0].result2)
+            //{
+            //    MessageBox.Show("gewonnen" + result[0].Team1);
+            //}
+
+
         }
     }
 }

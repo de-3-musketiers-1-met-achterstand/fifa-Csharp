@@ -10,6 +10,8 @@ namespace test_communicatie
     {
         public string Team1 { get; set; }
         public string Team2 { get; set; }
+        public int result1 { get; set; }
+        public int result2 { get; set; }
 
         public Match(string team1, string team2)
         {
