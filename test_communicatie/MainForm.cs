@@ -44,7 +44,7 @@ namespace test_communicatie
             System.Net.WebClient downloader = new System.Net.WebClient();
             string teamJson;
 
-            teamJson = downloader.DownloadString("http://localhost/fifa-Php/PHP/jsonecho.php?key=hDMc4pFrC3");
+            teamJson = downloader.DownloadString("https://3513658495623.000webhostapp.com/jsonecho.php?key=71abae66b0d3a4eb39aee4281228eec4");
 
             List<Team> teams = JsonConvert.DeserializeObject<List<Team>>(teamJson);
 
@@ -55,7 +55,7 @@ namespace test_communicatie
 
             string matchJson;
 
-            matchJson = downloader.DownloadString("http://localhost/fifa-Php/PHP/matchesjsonecho.php?key=hDMc4pFrC3");
+            matchJson = downloader.DownloadString("https://3513658495623.000webhostapp.com/matchesjsonecho.php?key=71abae66b0d3a4eb39aee4281228eec4");
             List<Match> matches = JsonConvert.DeserializeObject<List<Match>>(matchJson);
 
 
@@ -208,7 +208,7 @@ namespace test_communicatie
         {
             System.Net.WebClient downloader = new System.Net.WebClient();
             string resultJson;
-            resultJson = downloader.DownloadString("http://localhost/fifa-Php/PHP/matchesjsonecho.php?key=hDMc4pFrC3");
+            resultJson = downloader.DownloadString("https://3513658495623.000webhostapp.com/matchesjsonecho.php?key=71abae66b0d3a4eb39aee4281228eec4");
             List<Match> result = JsonConvert.DeserializeObject<List<Match>>(resultJson);
 
             if (showBetListBox.SelectedIndex == -1)
@@ -272,23 +272,6 @@ namespace test_communicatie
                     
                 }
             }
-
-
-
-            //for (int i = 0; i < result.Count; i++)
-            //{
-            //    if(team == result[i].Team1 || team == result[i].Team2)
-            //    {
-            //        MessageBox.Show("test"); 
-            //    }
-            //}           
-
-            //if (result[0].result1 > result[0].result2)
-            //{
-            //    MessageBox.Show("gewonnen" + result[0].Team1);
-            //}
-
-
         }
     }
 }
