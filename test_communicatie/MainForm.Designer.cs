@@ -84,10 +84,11 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(590, 34);
+            this.label2.Size = new System.Drawing.Size(865, 34);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hier kunt u geld inzetten op verschillende teams.\r\nU ziet een overzicht van welke" +
-    " teams er zijn en de wedstrijden die er gaan worden gespeeld.\r\n";
+    " teams er zijn en de wedstrijden die er gaan worden gespeeld. Je kunt alleen hel" +
+    "e geld bedragen invullen.\r\n";
             // 
             // nameBettorLabel
             // 
@@ -291,7 +292,7 @@
             this.checkResultButton.Name = "checkResultButton";
             this.checkResultButton.Size = new System.Drawing.Size(455, 51);
             this.checkResultButton.TabIndex = 13;
-            this.checkResultButton.Text = "Uitslagen binnehalen";
+            this.checkResultButton.Text = "Uitslagen binnen halen";
             this.checkResultButton.UseVisualStyleBackColor = true;
             this.checkResultButton.Click += new System.EventHandler(this.checkResultButton_Click);
             // 
