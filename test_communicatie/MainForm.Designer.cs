@@ -51,8 +51,13 @@
             this.cheatButton = new System.Windows.Forms.Button();
             this.showBetListBox = new System.Windows.Forms.ListBox();
             this.checkResultButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.team1NumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.team2NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.placeBetGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.team1NumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.team2NumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // showTeamsListBox
@@ -133,6 +138,9 @@
             // 
             // placeBetGroupBox
             // 
+            this.placeBetGroupBox.Controls.Add(this.team2NumericUpDown);
+            this.placeBetGroupBox.Controls.Add(this.team1NumericUpDown);
+            this.placeBetGroupBox.Controls.Add(this.label7);
             this.placeBetGroupBox.Controls.Add(this.label6);
             this.placeBetGroupBox.Controls.Add(this.label5);
             this.placeBetGroupBox.Controls.Add(this.betAmountTextBox);
@@ -159,7 +167,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 170);
+            this.label5.Location = new System.Drawing.Point(36, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 17);
             this.label5.TabIndex = 10;
@@ -167,14 +175,14 @@
             // 
             // betAmountTextBox
             // 
-            this.betAmountTextBox.Location = new System.Drawing.Point(112, 167);
+            this.betAmountTextBox.Location = new System.Drawing.Point(112, 223);
             this.betAmountTextBox.Name = "betAmountTextBox";
             this.betAmountTextBox.Size = new System.Drawing.Size(108, 22);
             this.betAmountTextBox.TabIndex = 12;
             // 
             // betButton
             // 
-            this.betButton.Location = new System.Drawing.Point(112, 210);
+            this.betButton.Location = new System.Drawing.Point(112, 276);
             this.betButton.Name = "betButton";
             this.betButton.Size = new System.Drawing.Size(108, 54);
             this.betButton.TabIndex = 11;
@@ -287,6 +295,29 @@
             this.checkResultButton.UseVisualStyleBackColor = true;
             this.checkResultButton.Click += new System.EventHandler(this.checkResultButton_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(36, 171);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 17);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Uitslag :";
+            // 
+            // team1NumericUpDown
+            // 
+            this.team1NumericUpDown.Location = new System.Drawing.Point(102, 171);
+            this.team1NumericUpDown.Name = "team1NumericUpDown";
+            this.team1NumericUpDown.Size = new System.Drawing.Size(44, 22);
+            this.team1NumericUpDown.TabIndex = 14;
+            // 
+            // team2NumericUpDown
+            // 
+            this.team2NumericUpDown.Location = new System.Drawing.Point(185, 171);
+            this.team2NumericUpDown.Name = "team2NumericUpDown";
+            this.team2NumericUpDown.Size = new System.Drawing.Size(44, 22);
+            this.team2NumericUpDown.TabIndex = 15;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -311,6 +342,8 @@
             this.placeBetGroupBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.team1NumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.team2NumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,6 +374,9 @@
         private System.Windows.Forms.Label cheatLabel;
         private System.Windows.Forms.ListBox showBetListBox;
         private System.Windows.Forms.Button checkResultButton;
+        private System.Windows.Forms.NumericUpDown team2NumericUpDown;
+        private System.Windows.Forms.NumericUpDown team1NumericUpDown;
+        private System.Windows.Forms.Label label7;
     }
 }
 

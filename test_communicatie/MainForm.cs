@@ -86,6 +86,8 @@ namespace test_communicatie
                     team = team1RadioButton.Text;
                     Match match = (Match)machtesComboBox.SelectedItem;
                     int betAmount = int.Parse(betAmountTextBox.Text);
+                    int myResultTeam1 = (int)team1NumericUpDown.Value;
+                    int myResultTeam2 = (int)team2NumericUpDown.Value;
 
 
                     if(betAmount < 1)
@@ -105,7 +107,7 @@ namespace test_communicatie
                     money = money - betAmount;
                     walletLabel.Text = money.ToString();
 
-                    Bet newBet = new Bet(match, betAmount, team);
+                    Bet newBet = new Bet(match, betAmount, team, myResultTeam1, myResultTeam2);
 
                     showBetListBox.Items.Add(newBet);
                 }
@@ -122,7 +124,8 @@ namespace test_communicatie
                     team = team2RadioButton.Text;
                     Match match = (Match)machtesComboBox.SelectedItem;
                     int betAmount = int.Parse(betAmountTextBox.Text);
-
+                    int myResultTeam1 = (int)team1NumericUpDown.Value;
+                    int myResultTeam2 = (int)team2NumericUpDown.Value;
 
                     if (betAmount < 1)
                     {
@@ -141,7 +144,7 @@ namespace test_communicatie
                     money = money - betAmount;
                     walletLabel.Text = money.ToString();
 
-                    Bet newBet = new Bet(match, betAmount, team);
+                    Bet newBet = new Bet(match, betAmount, team, myResultTeam1, myResultTeam2);
 
                     showBetListBox.Items.Add(newBet);
                 }
@@ -223,18 +226,37 @@ namespace test_communicatie
                     {
                         if (bet.MyTeam == result[i].Team1)
                         {
+                            if (bet.Match.result1 == bet.myResultTeam1 && bet.Match.result2 == bet.myResultTeam2)
+                            {
+                                money = money + bet.Amount * 3;
+                                walletLabel.Text = money.ToString();
+                                MessageBox.Show("Je hebt de precieze uitslag goed, je krijgt het drie dubbele van je ingezetten bedrag!");
+                                showBetListBox.Items.Remove(showBetListBox.SelectedItem);
+                                return;
+                            }
+
                             money = money + bet.Amount * 2;
                             walletLabel.Text = money.ToString();
                             MessageBox.Show("Je hebt gewonnen, Je krijgt het dubbele van je ingezetten bedrag");
                             showBetListBox.Items.Remove(showBetListBox.SelectedItem);
                             return;
+
                         }
                     }
                                         
                     if (bet.Match.result2 > bet.Match.result1)
                     {
                         if (bet.MyTeam == result[i].Team2)
-                        {                       
+                        {
+                            if (bet.Match.result1 == bet.myResultTeam1 && bet.Match.result2 == bet.myResultTeam2)
+                            {
+                                money = money + bet.Amount * 3;
+                                walletLabel.Text = money.ToString();
+                                MessageBox.Show("Je hebt de precieze uitslag goed, je krijgt het drie dubbele van je ingezetten bedrag!");
+                                showBetListBox.Items.Remove(showBetListBox.SelectedItem);
+                                return;
+                            }
+
                             money = money + bet.Amount * 2;
                             walletLabel.Text = money.ToString();
                             MessageBox.Show("Je hebt gewonnen, Je krijgt het dubbele van je ingezetten bedrag");
